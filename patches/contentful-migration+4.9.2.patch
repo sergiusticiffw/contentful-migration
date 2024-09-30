@@ -1,0 +1,13 @@
+diff --git a/node_modules/contentful-migration/built/lib/action/entry-transform-to-type.js b/node_modules/contentful-migration/built/lib/action/entry-transform-to-type.js
+index 9346549..2b243ca 100644
+--- a/node_modules/contentful-migration/built/lib/action/entry-transform-to-type.js
++++ b/node_modules/contentful-migration/built/lib/action/entry-transform-to-type.js
+@@ -43,7 +43,7 @@ class EntryTransformToTypeAction extends action_1.APIAction {
+         const locales = await api.getLocalesForSpace();
+         for (const entry of entries) {
+             const inputs = this.fromFields ? _.pick(entry.fields, this.fromFields) : entry.fields;
+-            const newEntryId = await this.identityKey(inputs);
++            const newEntryId = await this.identityKey(inputs, { id: entry.id });
+             const hasEntry = await api.hasEntry(newEntryId);
+             if (hasEntry) {
+                 await api.recordRuntimeError(new Error(`Entry with id '${newEntryId}' already exists`));
