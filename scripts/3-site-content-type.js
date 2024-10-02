@@ -281,6 +281,9 @@ module.exports = function (migration) {
     name: 'Book Visit Link',
     type: 'Symbol',
     required: false,
+    validations: [{
+      regexp: { pattern: "^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$", flags: null }
+    }]
   });
   site.changeFieldControl('bookVisitLink', 'builtin', 'urlEditor', {
     helpText:
