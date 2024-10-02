@@ -192,7 +192,7 @@ module.exports = function (migration) {
     items: {
       type: 'Link',
       linkType: 'Entry',
-      validations: [],
+      validations: [{ linkContentType: ['parkingInfo'] }],
     },
   });
   site.changeFieldControl('parkingInfo', 'builtin', 'entryCardsEditor', {
