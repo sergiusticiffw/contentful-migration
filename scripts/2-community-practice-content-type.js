@@ -5,7 +5,6 @@ module.exports = function (migration) {
     .name('Community Practice')
     .description('');
 
-
   // add field
   communityPractice.createField('practiceName', {
     name: 'Community Practice Name',
@@ -19,7 +18,7 @@ module.exports = function (migration) {
   });
   communityPractice.changeFieldControl('practiceName', 'builtin', 'singleLine', {
     helpText:
-      'Enter the title of this item; should be the friendly name. ',
+      'Enter the title of this item; should be the friendly name.',
   });
 
   // add entry title
@@ -83,7 +82,7 @@ module.exports = function (migration) {
       validations: [
         {
           linkContentType: [
-            'address_phone',
+            'addressPhone',
           ],
         },
       ],
@@ -107,7 +106,7 @@ module.exports = function (migration) {
       validations: [
         {
           linkContentType: [
-            'address_phone',
+            'addressPhone',
           ],
         },
       ],

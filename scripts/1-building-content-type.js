@@ -71,7 +71,7 @@ module.exports = function (migration) {
       validations: [
         {
           linkContentType: [
-            'address_phone',
+            'addressPhone',
           ],
         },
       ],
@@ -173,14 +173,6 @@ module.exports = function (migration) {
     name: 'Gozio JSON',
     type: 'Object',
     required: false,
-    validations: [
-      {
-        size: {
-          min: null,
-          max: 255,
-        }
-      }
-    ]
   });
   building.changeFieldControl('gozioJSON', 'builtin', 'objectEditor', {
     helpText:
