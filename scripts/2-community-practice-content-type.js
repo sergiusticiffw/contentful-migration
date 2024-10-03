@@ -82,7 +82,7 @@ module.exports = function (migration) {
       validations: [
         {
           linkContentType: [
-            'addressPhone',
+            'siteBuildingContact',
           ],
         },
       ],
@@ -106,7 +106,7 @@ module.exports = function (migration) {
       validations: [
         {
           linkContentType: [
-            'addressPhone',
+            'clinicContact',
           ],
         },
       ],
