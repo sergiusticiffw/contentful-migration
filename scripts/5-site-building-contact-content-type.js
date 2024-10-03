@@ -1,7 +1,7 @@
 module.exports = function (migration) {
   // create new content type
   const siteBuildingContact = migration
-    .createContentType('siteBuildingContact')
+    .createContentType('locationSiteBuildingContact')
     .name('Site/Building Contact')
     .description('');
 

@@ -1,7 +1,7 @@
 module.exports = function (migration) {
   // create new content type
   const epicDepartment = migration
-    .createContentType('epicDepartment')
+    .createContentType('locationEpicDepartment')
     .name('Epic Department')
     .description('');
 
@@ -56,7 +56,7 @@ module.exports = function (migration) {
     type: 'Link',
     linkType: 'Entry',
     required: false,
-    validations: [{ linkContentType: ['clinic'] }],
+    validations: [{ linkContentType: ['locationClinic'] }],
   });
   epicDepartment.changeFieldControl('locationName', 'builtin', 'entryLinkEditor');
 
@@ -66,7 +66,7 @@ module.exports = function (migration) {
     type: 'Link',
     linkType: 'Entry',
     required: false,
-    validations: [{ linkContentType: ['clinicContact'] }],
+    validations: [{ linkContentType: ['locationClinicContact'] }],
   });
   epicDepartment.changeFieldControl('physicalLocation', 'builtin', 'entryLinkEditor');
 

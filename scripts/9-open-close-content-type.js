@@ -1,7 +1,7 @@
 module.exports = function (migration) {
   // create new content type
   const openClose = migration
-    .createContentType('openClose')
+    .createContentType('locationOpenClose')
     .name('Open/Close')
     .description('');
 

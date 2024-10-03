@@ -1,7 +1,7 @@
 module.exports = function (migration) {
   // create new content type
   const building = migration
-    .createContentType('building')
+    .createContentType('locationBuilding')
     .name('Building')
     .description('');
 
@@ -63,7 +63,7 @@ module.exports = function (migration) {
       validations: [
         {
           linkContentType: [
-            'site',
+            'locationSite',
           ],
         },
       ],
@@ -87,7 +87,7 @@ module.exports = function (migration) {
       validations: [
         {
           linkContentType: [
-            'siteBuildingContact',
+            'locationSiteBuildingContact',
           ],
         },
       ],

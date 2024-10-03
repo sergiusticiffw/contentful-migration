@@ -1,7 +1,7 @@
 module.exports = function (migration) {
   // create new content type
   const site = migration
-    .createContentType('site')
+    .createContentType('locationSite')
     .name('Site')
     .description('');
 
@@ -170,7 +170,7 @@ module.exports = function (migration) {
     type: 'Link',
     linkType: 'Entry',
     required: false,
-    validations: [{ linkContentType: ['openHours'] }],
+    validations: [{ linkContentType: ['locationOpenHours'] }],
   });
   site.changeFieldControl('openHours', 'builtin', 'entryLinkEditor', {
     helpText: 'Enter the open hours for this site.',
@@ -187,7 +187,7 @@ module.exports = function (migration) {
       validations: [
         {
           linkContentType: [
-            'siteBuildingContact',
+            'locationSiteBuildingContact',
           ],
         },
       ],
@@ -208,7 +208,7 @@ module.exports = function (migration) {
     items: {
       type: 'Link',
       linkType: 'Entry',
-      validations: [{ linkContentType: ['parkingInfo'] }],
+      validations: [{ linkContentType: ['locationParkingInfo'] }],
     },
   });
   site.changeFieldControl('parkingInfo', 'builtin', 'entryCardsEditor', {

@@ -1,7 +1,7 @@
 module.exports = function (migration) {
   // create new content type
   const clinic = migration
-    .createContentType('clinic')
+    .createContentType('locationClinic')
     .name('Clinic')
     .description('');
 
@@ -128,7 +128,7 @@ module.exports = function (migration) {
     type: 'Link',
     linkType: 'Entry',
     required: false,
-    validations: [{ linkContentType: ['openHours'] }],
+    validations: [{ linkContentType: ['locationOpenHours'] }],
   });
   clinic.changeFieldControl('openHours', 'builtin', 'entryLinkEditor', {
     helpText: 'Enter the open hours for this clinic.',
@@ -159,7 +159,7 @@ module.exports = function (migration) {
       validations: [
         {
           linkContentType: [
-            'building',
+            'locationBuilding',
           ],
         },
       ],
@@ -196,7 +196,7 @@ module.exports = function (migration) {
     type: 'Link',
     linkType: 'Entry',
     required: false,
-    validations: [{ linkContentType: ['epicDepartment'] }],
+    validations: [{ linkContentType: ['locationEpicDepartment'] }],
   });
   clinic.changeFieldControl('epicDepartment', 'builtin', 'entryLinkEditor', {
     helpText: 'Select the Epic Department for this item.',

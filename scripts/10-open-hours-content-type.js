@@ -1,7 +1,7 @@
 module.exports = function (migration) {
   // create new content type
   const openHours = migration
-    .createContentType('openHours')
+    .createContentType('locationOpenHours')
     .name('Open Hours')
     .description('');
 
@@ -33,7 +33,7 @@ module.exports = function (migration) {
       linkType: 'Entry',
       validations: [
         {
-          linkContentType: ['openClose'],
+          linkContentType: ['locationOpenClose'],
         },
       ],
     },
@@ -55,7 +55,7 @@ module.exports = function (migration) {
       linkType: 'Entry',
       validations: [
         {
-          linkContentType: ['openClose'],
+          linkContentType: ['locationOpenClose'],
         },
       ],
     },
@@ -77,7 +77,7 @@ module.exports = function (migration) {
       linkType: 'Entry',
       validations: [
         {
-          linkContentType: ['openClose'],
+          linkContentType: ['locationOpenClose'],
         },
       ],
     },
@@ -99,7 +99,7 @@ module.exports = function (migration) {
       linkType: 'Entry',
       validations: [
         {
-          linkContentType: ['openClose'],
+          linkContentType: ['locationOpenClose'],
         },
       ],
     },
@@ -121,7 +121,7 @@ module.exports = function (migration) {
       linkType: 'Entry',
       validations: [
         {
-          linkContentType: ['openClose'],
+          linkContentType: ['locationOpenClose'],
         },
       ],
     },
@@ -143,7 +143,7 @@ module.exports = function (migration) {
       linkType: 'Entry',
       validations: [
         {
-          linkContentType: ['openClose'],
+          linkContentType: ['locationOpenClose'],
         },
       ],
     },
@@ -165,7 +165,7 @@ module.exports = function (migration) {
       linkType: 'Entry',
       validations: [
         {
-          linkContentType: ['openClose'],
+          linkContentType: ['locationOpenClose'],
         },
       ],
     },
