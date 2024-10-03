@@ -2,7 +2,7 @@ module.exports = function (migration) {
   // create new content type
   const clinic = migration
     .createContentType('locationClinic')
-    .name('Clinic')
+    .name('📄 Clinic')
     .description('');
 
   // add field

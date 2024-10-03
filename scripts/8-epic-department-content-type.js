@@ -2,7 +2,7 @@ module.exports = function (migration) {
   // create new content type
   const epicDepartment = migration
     .createContentType('locationEpicDepartment')
-    .name('Epic Department')
+    .name('📄 Epic Department')
     .description('');
 
   // add field

@@ -2,7 +2,7 @@ module.exports = function (migration) {
   // create new content type
   const siteBuildingContact = migration
     .createContentType('locationSiteBuildingContact')
-    .name('Site/Building Contact')
+    .name('📄 Site/Building Contact')
     .description('');
 
   // add field

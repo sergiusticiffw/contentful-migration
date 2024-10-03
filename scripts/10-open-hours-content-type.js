@@ -2,7 +2,7 @@ module.exports = function (migration) {
   // create new content type
   const openHours = migration
     .createContentType('locationOpenHours')
-    .name('Open Hours')
+    .name('📄 Open Hours')
     .description('');
 
   // add field

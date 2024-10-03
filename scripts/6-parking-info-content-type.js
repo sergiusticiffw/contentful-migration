@@ -2,7 +2,7 @@ module.exports = function (migration) {
   // create new content type
   const parkingInfo = migration
     .createContentType('locationParkingInfo')
-    .name('Parking Info')
+    .name('📄 Parking Info')
     .description('');
 
   // add field

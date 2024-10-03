@@ -2,7 +2,7 @@ module.exports = function (migration) {
   // create new content type
   const communityPractice = migration
     .createContentType('locationCommunityPractice')
-    .name('Community Practice')
+    .name('📄 Community Practice')
     .description('');
 
   // add field
