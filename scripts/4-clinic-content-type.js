@@ -6,6 +6,25 @@ module.exports = function (migration) {
     .description('');
 
   // add field
+  clinic.createField('adminTitle', {
+    name: 'Admin title',
+    type: 'Symbol',
+    required: true,
+    validations: [
+      {
+        unique: true,
+      },
+    ],
+  });
+  clinic.changeFieldControl('adminTitle', 'builtin', 'singleLine', {
+    helpText:
+      'Enter an admin title for this address.',
+  });
+
+  // add entry title
+  clinic.displayField('adminTitle');
+
+  // add field
   clinic.createField('clinicName', {
     name: 'Clinic Name',
     type: 'Symbol',
@@ -20,9 +39,6 @@ module.exports = function (migration) {
     helpText:
       'Enter the title of this item; should be the friendly name. ex: Orthopedics & Sports Medicine Plano.',
   });
-
-  // add entry title
-  clinic.displayField('clinicName');
 
   // add field
   clinic.createField('clinicOfficialName', {

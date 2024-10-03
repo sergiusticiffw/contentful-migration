@@ -6,6 +6,25 @@ module.exports = function (migration) {
     .description('');
 
   // add field
+  communityPractice.createField('adminTitle', {
+    name: 'Admin title',
+    type: 'Symbol',
+    required: true,
+    validations: [
+      {
+        unique: true,
+      },
+    ],
+  });
+  communityPractice.changeFieldControl('adminTitle', 'builtin', 'singleLine', {
+    helpText:
+      'Enter an admin title for this address.',
+  });
+
+  // add entry title
+  communityPractice.displayField('adminTitle');
+
+  // add field
   communityPractice.createField('practiceName', {
     name: 'Community Practice Name',
     type: 'Symbol',
@@ -20,9 +39,6 @@ module.exports = function (migration) {
     helpText:
       'Enter the title of this item; should be the friendly name.',
   });
-
-  // add entry title
-  communityPractice.displayField('practiceName');
 
   // add field
   communityPractice.createField('practiceOfficialName', {

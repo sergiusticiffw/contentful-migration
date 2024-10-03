@@ -6,6 +6,25 @@ module.exports = function (migration) {
     .description('');
 
   // add field
+  epicDepartment.createField('adminTitle', {
+    name: 'Admin title',
+    type: 'Symbol',
+    required: true,
+    validations: [
+      {
+        unique: true,
+      },
+    ],
+  });
+  epicDepartment.changeFieldControl('adminTitle', 'builtin', 'singleLine', {
+    helpText:
+      'Enter an admin title for this address.',
+  });
+
+  // add entry title
+  epicDepartment.displayField('adminTitle');
+
+  // add field
   epicDepartment.createField('departmentID', {
     name: 'Department ID',
     type: 'Symbol',

@@ -6,6 +6,25 @@ module.exports = function (migration) {
     .description('');
 
   // add field
+  parkingInfo.createField('adminTitle', {
+    name: 'Admin title',
+    type: 'Symbol',
+    required: true,
+    validations: [
+      {
+        unique: true,
+      },
+    ],
+  });
+  parkingInfo.changeFieldControl('adminTitle', 'builtin', 'singleLine', {
+    helpText:
+      'Enter an admin title for this address.',
+  });
+
+  // add entry title
+  parkingInfo.displayField('adminTitle');
+
+  // add field
   parkingInfo.createField('parkingName', {
     name: 'Parking Name',
     type: 'Symbol',
@@ -20,9 +39,6 @@ module.exports = function (migration) {
     helpText:
       'Enter the parking location name.',
   });
-
-  // add entry title
-  parkingInfo.displayField('parkingName');
 
   // add field
   parkingInfo.createField('parkingType', {

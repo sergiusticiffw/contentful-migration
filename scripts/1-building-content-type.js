@@ -5,6 +5,25 @@ module.exports = function (migration) {
     .name('Building')
     .description('');
 
+  // add field
+  building.createField('adminTitle', {
+    name: 'Admin title',
+    type: 'Symbol',
+    required: true,
+    validations: [
+      {
+        unique: true,
+      },
+    ],
+  });
+  building.changeFieldControl('adminTitle', 'builtin', 'singleLine', {
+    helpText:
+      'Enter an admin title for this address.',
+  });
+
+  // add entry title
+  building.displayField('adminTitle');
+
 
   // add field
   building.createField('buildingOfficialName', {
@@ -21,9 +40,6 @@ module.exports = function (migration) {
     helpText:
       'Full official name of building.',
   });
-
-  // add entry title
-  building.displayField('buildingOfficialName');
 
   // add field
   building.createField('buildingShortName', {

@@ -12,12 +12,9 @@ module.exports = function (migration) {
     required: true,
     validations: [
       {
-        size: {
-          min: null,
-          max: 255,
-        }
+        unique: true,
       }
-    ]
+    ],
   });
   openClose.changeFieldControl('adminTitle', 'builtin', 'singleLine', {
     helpText: 'Enter a unique ID for this content.',
