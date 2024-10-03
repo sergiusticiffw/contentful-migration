@@ -81,13 +81,13 @@ module.exports = function (migration) {
     type: 'Link',
     linkType: 'Entry',
     required: false,
-    validations: [{ linkContentType: ['promoCallOut'] }],
+    validations: [{ linkContentType: ['promoBlock'] }],
   });
-  site.changeFieldControl('promoCallOut', 'builtin', 'entryCardsEditor', {
+  site.changeFieldControl('promoCallOut', 'builtin', 'entryCardEditor', {
     helpText: 'Add a page-specific promo call out, if desired. If a CT-wide promo call out has been applied, both promos will display.',
     bulkEditing: false,
     showLinkEntityAction: true,
-    showCreateEntityAction: true
+    showCreateEntityAction: true,
   });
 
   // add field
