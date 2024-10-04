@@ -113,7 +113,7 @@ module.exports = function (migration) {
   siteBuildingContact.createField('mapLink', {
     name: 'Google Maps Link',
     type: 'Symbol',
-    required: false,
+    required: true,
   });
   siteBuildingContact.changeFieldControl('mapLink', 'builtin', 'urlEditor', {
     helpText: 'Enter the Google Maps link for this location.',
