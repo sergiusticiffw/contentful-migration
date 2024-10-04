@@ -74,7 +74,10 @@ module.exports = function (migration) {
       regexp: { pattern: "^\\d[ -.]?\\(?\\d\\d\\d\\)?[ -.]?\\d\\d\\d[ -.]?\\d\\d\\d\\d$", flags: null }
     }]
   });
-  siteBuildingContact.changeFieldControl('phone', 'builtin', 'singleLine');
+  siteBuildingContact.changeFieldControl('phone', 'builtin', 'singleLine',{
+    helpText:
+      'e.g. 1-212-456-7890',
+  });
 
   // add field
   siteBuildingContact.createField('fax', {
@@ -85,7 +88,10 @@ module.exports = function (migration) {
       regexp: { pattern: "^\\d[ -.]?\\(?\\d\\d\\d\\)?[ -.]?\\d\\d\\d[ -.]?\\d\\d\\d\\d$", flags: null }
     }]
   });
-  siteBuildingContact.changeFieldControl('fax', 'builtin', 'singleLine');
+  siteBuildingContact.changeFieldControl('fax', 'builtin', 'singleLine', {
+    helpText:
+      'e.g. 1-212-456-7890',
+  });
 
   // add field
   siteBuildingContact.createField('latitude', {

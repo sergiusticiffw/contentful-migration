@@ -47,7 +47,10 @@ module.exports = function (migration) {
       regexp: { pattern: "^\\d[ -.]?\\(?\\d\\d\\d\\)?[ -.]?\\d\\d\\d[ -.]?\\d\\d\\d\\d$", flags: null }
     }]
   });
-  clinicContact.changeFieldControl('phone', 'builtin', 'singleLine');
+  clinicContact.changeFieldControl('phone', 'builtin', 'singleLine', {
+    helpText:
+      'e.g. 1-212-456-7890',
+  });
 
   // add field
   clinicContact.createField('fax', {
@@ -58,7 +61,10 @@ module.exports = function (migration) {
       regexp: { pattern: "^\\d[ -.]?\\(?\\d\\d\\d\\)?[ -.]?\\d\\d\\d[ -.]?\\d\\d\\d\\d$", flags: null }
     }]
   });
-  clinicContact.changeFieldControl('fax', 'builtin', 'singleLine');
+  clinicContact.changeFieldControl('fax', 'builtin', 'singleLine', {
+    helpText:
+      'e.g. 1-212-456-7890',
+  });
 
   // add field
   clinicContact.createField('email', {
