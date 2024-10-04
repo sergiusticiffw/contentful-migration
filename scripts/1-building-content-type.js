@@ -14,6 +14,12 @@ module.exports = function (migration) {
       {
         unique: true,
       },
+      {
+        size: {
+          min: null,
+          max: 255,
+        }
+      },
     ],
   });
   building.changeFieldControl('adminTitle', 'builtin', 'singleLine', {

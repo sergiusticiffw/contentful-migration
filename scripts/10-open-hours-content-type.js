@@ -13,7 +13,13 @@ module.exports = function (migration) {
     validations: [
       {
         unique: true,
-      }
+      },
+      {
+        size: {
+          min: null,
+          max: 255,
+        }
+      },
     ],
   });
   openHours.changeFieldControl('adminTitle', 'builtin', 'singleLine', {
