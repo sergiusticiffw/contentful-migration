@@ -25,7 +25,7 @@ module.exports = function (migration) {
   communityPractice.displayField('adminTitle');
 
   // add field
-  communityPractice.createField('practiceName', {
+  communityPractice.createField('name', {
     name: 'Community Practice Name',
     type: 'Symbol',
     required: true,
@@ -35,29 +35,29 @@ module.exports = function (migration) {
       },
     ],
   });
-  communityPractice.changeFieldControl('practiceName', 'builtin', 'singleLine', {
+  communityPractice.changeFieldControl('name', 'builtin', 'singleLine', {
     helpText:
       'Enter the title of this item; should be the friendly name.',
   });
 
   // add field
-  communityPractice.createField('practiceOfficialName', {
+  communityPractice.createField('officialName', {
     name: 'Community Practice Official Name',
     type: 'Symbol',
     required: false,
   });
-  communityPractice.changeFieldControl('practiceOfficialName', 'builtin', 'singleLine', {
+  communityPractice.changeFieldControl('officialName', 'builtin', 'singleLine', {
     helpText:
       'Full official name of practice.',
   });
 
   // add field
-  communityPractice.createField('practiceShortName', {
+  communityPractice.createField('shortName', {
     name: 'Community Practice Short Name',
     type: 'Symbol',
     required: false,
   });
-  communityPractice.changeFieldControl('practiceShortName', 'builtin', 'singleLine', {
+  communityPractice.changeFieldControl('shortName', 'builtin', 'singleLine', {
     helpText:
       'Short name to be used on mobile app.',
   });

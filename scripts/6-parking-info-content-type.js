@@ -25,7 +25,7 @@ module.exports = function (migration) {
   parkingInfo.displayField('adminTitle');
 
   // add field
-  parkingInfo.createField('parkingName', {
+  parkingInfo.createField('name', {
     name: 'Parking Name',
     type: 'Symbol',
     required: true,
@@ -35,7 +35,7 @@ module.exports = function (migration) {
       },
     ],
   });
-  parkingInfo.changeFieldControl('parkingName', 'builtin', 'singleLine', {
+  parkingInfo.changeFieldControl('name', 'builtin', 'singleLine', {
     helpText:
       'Enter the parking location name.',
   });
@@ -85,12 +85,12 @@ module.exports = function (migration) {
   });
 
   // add field
-  parkingInfo.createField('buildingID', {
+  parkingInfo.createField('gozioID', {
     name: 'Gozio Building ID',
     type: 'Symbol',
     required: false,
   });
-  parkingInfo.changeFieldControl('buildingID', 'builtin', 'singleLine', {
+  parkingInfo.changeFieldControl('gozioID', 'builtin', 'singleLine', {
     helpText:
       'Gozio Building ID',
   });

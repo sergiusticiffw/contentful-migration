@@ -25,7 +25,7 @@ module.exports = function (migration) {
   clinic.displayField('adminTitle');
 
   // add field
-  clinic.createField('clinicName', {
+  clinic.createField('name', {
     name: 'Clinic Name',
     type: 'Symbol',
     required: true,
@@ -35,29 +35,29 @@ module.exports = function (migration) {
       },
     ],
   });
-  clinic.changeFieldControl('clinicName', 'builtin', 'singleLine', {
+  clinic.changeFieldControl('name', 'builtin', 'singleLine', {
     helpText:
       'Enter the title of this item; should be the friendly name. ex: Orthopedics & Sports Medicine Plano.',
   });
 
   // add field
-  clinic.createField('clinicOfficialName', {
+  clinic.createField('officialName', {
     name: 'Clinic Official Name',
     type: 'Symbol',
     required: false,
   });
-  clinic.changeFieldControl('clinicOfficialName', 'builtin', 'singleLine', {
+  clinic.changeFieldControl('officialName', 'builtin', 'singleLine', {
     helpText:
       'Full official name of clinic. ex: Children’s Health℠ Andrews Institute for Orthopaedics & Sports Medicine Plano.',
   });
 
   // add field
-  clinic.createField('clinicShortName', {
+  clinic.createField('shortName', {
     name: 'Clinic Short Name',
     type: 'Symbol',
     required: false,
   });
-  clinic.changeFieldControl('clinicShortName', 'builtin', 'singleLine', {
+  clinic.changeFieldControl('shortName', 'builtin', 'singleLine', {
     helpText:
       'Short name to be used on mobile app, ex: Andrews Plano.',
   });
@@ -235,12 +235,12 @@ module.exports = function (migration) {
   });
 
   // add field
-  clinic.createField('gozioClinicID', {
+  clinic.createField('gozioID', {
     name: 'Gozio Clinic ID',
     type: 'Symbol',
     required: false,
   });
-  clinic.changeFieldControl('gozioClinicID', 'builtin', 'singleLine', {
+  clinic.changeFieldControl('gozioID', 'builtin', 'singleLine', {
     helpText:
       'Enter the Gozio ID that matches this item.',
   });
@@ -301,7 +301,7 @@ module.exports = function (migration) {
   });
 
   // add field
-  clinic.createField('relatedDepartmentsPrograms', {
+  clinic.createField('departmentsAndPrograms', {
     name: 'Related Departments/Programs',
     type: 'Array',
     required: false,
@@ -315,7 +315,7 @@ module.exports = function (migration) {
       ],
     },
   });
-  clinic.changeFieldControl('relatedDepartmentsPrograms', 'builtin', 'entryLinksEditor', {
+  clinic.changeFieldControl('departmentsAndPrograms', 'builtin', 'entryLinksEditor', {
     helpText: 'Select the list of related departments/programs.',
     bulkEditing: false,
     showLinkEntityAction: true,

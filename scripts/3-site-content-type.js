@@ -25,7 +25,7 @@ module.exports = function (migration) {
   site.displayField('adminTitle');
 
   // add field
-  site.createField('siteName', {
+  site.createField('name', {
     name: 'Site Name',
     type: 'Symbol',
     required: true,
@@ -35,29 +35,29 @@ module.exports = function (migration) {
       },
     ],
   });
-  site.changeFieldControl('siteName', 'builtin', 'singleLine', {
+  site.changeFieldControl('name', 'builtin', 'singleLine', {
     helpText:
       'Enter the title of this item; should be the friendly name. ex: Pulmonary Care Specialists Dallas.',
   });
 
   // add field
-  site.createField('siteOfficialName', {
+  site.createField('officialName', {
     name: 'Site Official Name',
     type: 'Symbol',
     required: false,
   });
-  site.changeFieldControl('siteOfficialName', 'builtin', 'singleLine', {
+  site.changeFieldControl('officialName', 'builtin', 'singleLine', {
     helpText:
       'Full official name of site. May be used on card, page title, and first mention in body copy. ex: Children’s Health℠ Pulmonary Care Specialists Dallas.',
   });
 
   // add field
-  site.createField('siteShortName', {
+  site.createField('shortName', {
     name: 'Site Short Name',
     type: 'Symbol',
     required: false,
   });
-  site.changeFieldControl('siteShortName', 'builtin', 'singleLine', {
+  site.changeFieldControl('shortName', 'builtin', 'singleLine', {
     helpText:
       'Short name to be used on mobile app, ex: Specialists Dallas.',
   });
@@ -177,7 +177,7 @@ module.exports = function (migration) {
   });
 
   // add field
-  site.createField('siteContact', {
+  site.createField('siteBuildingContact', {
     name: 'Site Contact',
     type: 'Array',
     required: true,
@@ -193,7 +193,7 @@ module.exports = function (migration) {
       ],
     },
   });
-  site.changeFieldControl('siteContact', 'builtin', 'entryCardsEditor', {
+  site.changeFieldControl('siteBuildingContact', 'builtin', 'entryCardsEditor', {
     helpText: 'Add contact details for this site. If preparing for a move, you can select multiple (e.g. current and upcoming) and manage the cutover via publish/unpublish scheduling in the Site/Building Contact entry.',
     bulkEditing: false,
     showLinkEntityAction: true,
@@ -236,14 +236,14 @@ module.exports = function (migration) {
   });
 
   // add field
-  site.createField('requestAnAppointment', {
+  site.createField('specialty', {
     name: 'Request an Appointment Department',
     type: 'Link',
     linkType: 'Entry',
     required: true,
     validations: [{ linkContentType: ['specialty'] }],
   });
-  site.changeFieldControl('requestAnAppointment', 'builtin', 'entryLinkEditor', {
+  site.changeFieldControl('specialty', 'builtin', 'entryLinkEditor', {
     helpText: 'When the user clicks "request an appointment" what department should be auto-selected on the appointment booking page.',
   });
 

@@ -33,14 +33,14 @@ module.exports = function (migration) {
   epicDepartment.changeFieldControl('departmentID', 'builtin', 'singleLine');
 
   // add field
-  epicDepartment.createField('departmentName', {
+  epicDepartment.createField('departmentsAndPrograms', {
     name: 'Department Name',
     type: 'Link',
     linkType: 'Entry',
     required: false,
     validations: [{ linkContentType: ['departmentAndProgram'] }],
   });
-  epicDepartment.changeFieldControl('departmentName', 'builtin', 'entryLinkEditor');
+  epicDepartment.changeFieldControl('departmentsAndPrograms', 'builtin', 'entryLinkEditor');
 
   // add field
   epicDepartment.createField('departmentAbbreviation', {
@@ -51,24 +51,24 @@ module.exports = function (migration) {
   epicDepartment.changeFieldControl('departmentAbbreviation', 'builtin', 'singleLine');
 
   // add field
-  epicDepartment.createField('locationName', {
+  epicDepartment.createField('clinic', {
     name: 'Location Name',
     type: 'Link',
     linkType: 'Entry',
     required: false,
     validations: [{ linkContentType: ['locationClinic'] }],
   });
-  epicDepartment.changeFieldControl('locationName', 'builtin', 'entryLinkEditor');
+  epicDepartment.changeFieldControl('clinic', 'builtin', 'entryLinkEditor');
 
   // add field
-  epicDepartment.createField('physicalLocation', {
+  epicDepartment.createField('clinicContact', {
     name: 'Physical Location',
     type: 'Link',
     linkType: 'Entry',
     required: false,
     validations: [{ linkContentType: ['locationClinicContact'] }],
   });
-  epicDepartment.changeFieldControl('physicalLocation', 'builtin', 'entryLinkEditor');
+  epicDepartment.changeFieldControl('clinicContact', 'builtin', 'entryLinkEditor');
 
   // add field
   epicDepartment.createField('specialty', {

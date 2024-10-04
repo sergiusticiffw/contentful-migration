@@ -26,7 +26,7 @@ module.exports = function (migration) {
 
 
   // add field
-  building.createField('buildingOfficialName', {
+  building.createField('officialName', {
     name: 'Building Official Name',
     type: 'Symbol',
     required: true,
@@ -36,18 +36,18 @@ module.exports = function (migration) {
       },
     ],
   });
-  building.changeFieldControl('buildingOfficialName', 'builtin', 'singleLine', {
+  building.changeFieldControl('officialName', 'builtin', 'singleLine', {
     helpText:
       'Full official name of building.',
   });
 
   // add field
-  building.createField('buildingShortName', {
+  building.createField('shortName', {
     name: 'Building Short Name',
     type: 'Symbol',
     required: false,
   });
-  building.changeFieldControl('buildingShortName', 'builtin', 'singleLine', {
+  building.changeFieldControl('shortName', 'builtin', 'singleLine', {
     helpText:
       'Short name to be used on mobile app, if applicable.',
   });
@@ -77,7 +77,7 @@ module.exports = function (migration) {
   });
 
   // add field
-  building.createField('buildingContact', {
+  building.createField('siteBuildingContact', {
     name: 'Building Contact',
     type: 'Array',
     required: true,
@@ -93,7 +93,7 @@ module.exports = function (migration) {
       ],
     },
   });
-  building.changeFieldControl('buildingContact', 'builtin', 'entryCardsEditor', {
+  building.changeFieldControl('siteBuildingContact', 'builtin', 'entryCardsEditor', {
     helpText: 'Add contact details for this building. If preparing for a move, you can select multiple (e.g. current and upcoming) and manage the cutover via publish/unpublish scheduling in the Site/Building Contact entry.',
     bulkEditing: false,
     showLinkEntityAction: true,
