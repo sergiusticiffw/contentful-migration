@@ -2,7 +2,7 @@ module.exports = function (migration) {
   // create new content type
   const parkingInfo = migration
     .createContentType('locationParkingInfo')
-    .name('📄 Parking Info')
+    .name('Parking Info')
     .description('');
 
   // add field
@@ -91,12 +91,12 @@ module.exports = function (migration) {
   });
 
   // add field
-  parkingInfo.createField('gozioID', {
+  parkingInfo.createField('buildingID', {
     name: 'Gozio Building ID',
     type: 'Symbol',
     required: false,
   });
-  parkingInfo.changeFieldControl('gozioID', 'builtin', 'singleLine', {
+  parkingInfo.changeFieldControl('buildingID', 'builtin', 'singleLine', {
     helpText:
       'Gozio Building ID',
   });

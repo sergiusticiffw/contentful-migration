@@ -2,7 +2,7 @@ module.exports = function (migration) {
   // create new content type
   const openClose = migration
     .createContentType('locationOpenClose')
-    .name('📄 Open/Close')
+    .name('Open/Close')
     .description('');
 
   // add field

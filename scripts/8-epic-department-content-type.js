@@ -2,7 +2,7 @@ module.exports = function (migration) {
   // create new content type
   const epicDepartment = migration
     .createContentType('locationEpicDepartment')
-    .name('📄 Epic Department')
+    .name('Epic Department')
     .description('');
 
   // add field
@@ -109,6 +109,14 @@ module.exports = function (migration) {
     required: false,
   });
   epicDepartment.changeFieldControl('epicCareDepartment', 'builtin', 'boolean');
+
+  // add field
+  epicDepartment.createField('status', {
+    name: 'Status',
+    type: 'Boolean',
+    required: false,
+  });
+  epicDepartment.changeFieldControl('status', 'builtin', 'boolean');
 
   // add field
   epicDepartment.createField('dateUpdated', {

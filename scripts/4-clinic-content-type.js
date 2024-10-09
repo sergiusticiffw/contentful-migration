@@ -2,7 +2,7 @@ module.exports = function (migration) {
   // create new content type
   const clinic = migration
     .createContentType('locationClinic')
-    .name('📄 Clinic')
+    .name('Clinic')
     .description('');
 
   // add field
@@ -241,12 +241,12 @@ module.exports = function (migration) {
   });
 
   // add field
-  clinic.createField('gozioID', {
+  clinic.createField('gozioClinicID', {
     name: 'Gozio Clinic ID',
     type: 'Symbol',
     required: false,
   });
-  clinic.changeFieldControl('gozioID', 'builtin', 'singleLine', {
+  clinic.changeFieldControl('gozioClinicID', 'builtin', 'singleLine', {
     helpText:
       'Enter the Gozio ID that matches this item.',
   });
